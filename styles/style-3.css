@@ -62,7 +62,6 @@ body {
 
 .work-img {
     max-width: 70%;
-    width: 100%;
     text-align: center;
 }
 
@@ -151,6 +150,21 @@ img {
 .contact-details {
     margin-top: 0;
     margin-bottom: 1em;
+}
+
+#work-item-workbench {
+}
+
+#work-item-push {
+    display: none;
+}
+
+#work-item-dart {
+    display: none;
+}
+
+#work-item-photo {
+    display: none;
 }
 
 /*Start of Nav menu*/
@@ -247,6 +261,10 @@ a:active {
 
     .work-menu {
         max-height: 7em;
+    }
+
+    .work-img {
+        max-height: 488px;
     }
 
     .top-space-work {

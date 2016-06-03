@@ -10,6 +10,9 @@
         <!--Reset stylesheet removes browser stylesheet default settings-->
         <link href="styles/reset.css" type="text/css" rel="stylesheet">
         <link href="styles/style-3.css" type="text/css" rel="stylesheet">
+
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
+
         <link href='https://fonts.googleapis.com/css?family=Roboto:400,100' rel='stylesheet' type='text/css'>
         
         <style>
@@ -56,13 +59,13 @@
     
     <div style="text-align:center;">
 
-        <img class="work-menu" src="images/poster-menu.png"alt="Workbench Poster">
+        <img id="thumb-workbench" class="work-menu" src="images/poster-menu.png"alt="Workbench Poster">
 
-        <img class="work-menu" src="images/pth-menu.png" alt="Push the Hay Home">
+        <img id="thumb-push" class="work-menu" src="images/pth-menu.png" alt="Push the Hay Home">
 
-        <img class="work-menu" src="images/dartgenie-menu.png" alt="DartGenie Home">    
+        <img id="thumb-dart" class="work-menu" src="images/dartgenie-menu.png" alt="DartGenie Home">
         
-        <img class="work-menu" src="images/photography-menu.png" alt="Photography - Bench">
+        <img id="thumb-photo" class="work-menu" src="images/photography-menu.png" alt="Photography - Bench">
 
     </div>   
 
@@ -70,25 +73,114 @@
 
 <div class="top-space-work"></div>    
 
-<!--Above div is to move everything below top menu-->    
-    
-<h2 style="padding:.5em 0em .8em 0em">Workbench</h2>    
+<!--Above div is to move everything below top menu-->
 
-<div style="text-align:center;">
+<div id="work-item-workbench">
     
-    <img class="work-img" src="images/poster-image.png">
-    
+    <h2 style="padding:.5em 0em .8em 0em">Workbench</h2>
+
+    <div style="text-align:center;">
+
+        <img class="work-img" src="images/poster-image.png">
+
+    </div>
+
+    <div class="about-text">
+
+        <p>Workbench is a product designed for my interaction design class. We were encouraged to design a product that stretches the limits of modern technology. My partner and I created the idea of a digital workbench for architectural modeling. The workbench has a full touch-screen tabletop with a screen size of 3 feet by 6 feet.</p>
+
+        <p>During this project, we conducted research, created personas, performed competitive analysis, built wireframes, and conducted usability tests. Our findings were summarized in a written report and the final concept was presented with a poster.</p>
+
+        <p>The poster and UI mockups were created using InDesign, with some assets created using Photoshop and Illustrator. We designed Workbench for working professionals and serious hobbyists and aimed to create a product that was intuitive for novice users while efficient for expert users.</p>
+
+    </div>
+
 </div>
 
-<div class="about-text">
-    
-    <p>Workbench is a product designed for my interaction design class. We were encouraged to design a product that stretches the limits of modern technology. My partner and I created the idea of a digital workbench for architectural modeling. The workbench has a full touch-screen tabletop with a screen size of 3 feet by 6 feet.</p>
+<div id="work-item-push">
 
-    <p>During this project, we conducted research, created personas, performed competitive analysis, built wireframes, and conducted usability tests. Our findings were summarized in a written report and the final concept was presented with a poster.</p>
-    
-    <p>The poster and UI mockups were created using InDesign, with some assets created using Photoshop and Illustrator. We designed Workbench for working professionals and serious hobbyists and aimed to create a product that was intuitive for novice users while efficient for expert users.</p>
-    
+    <h2 style="padding:.5em 0em .8em 0em">Push the Hay</h2>
+
+    <div style="text-align:center;">
+
+        <img class="work-img" src="images/pth-image-1.PNG">
+
+    </div>
+
+    <div class="about-text">
+
+        <p>Push the Hay is a logic puzzle game based on Sokoban, the block pushing game. It is our second mobile app and was designed to be a fully functional game with custom-made graphics and animations. We hope to release this app on iOS and Android by the end of May.</p>
+
+    </div>
+
 </div>
-    
+
+<div id="work-item-dart">
+
+    <h2 style="padding:.5em 0em .8em 0em">Dart Genie</h2>
+
+    <div style="text-align:center;">
+
+        <img class="work-img" src="images/dartgenie-image-1.PNG">
+
+    </div>
+
+    <div class="about-text">
+
+        <p>DartGenie is Accompa’s first mobile app. It was originally intended to be a bare-bones darts scoring app. Over time, we continued adding features to make it more useful. It is available on iOS and Android in the respective app stores, with more than 10,000 downloads.</p>
+
+        <p>I acted as the primary product interface to our offshore developers, prioritizing tasks and fixes. I created the logic for the GenieBot AI, and took over the remaining interface and graphic design work upon joining the project approximately one month into the nine-month project. The app was designed in Illustrator, and the assets were provided as PNGs to the programmers. I conducted competitive analysis and created a marketing plan for the app. I was also the primary tester for the app.</p>
+
+    </div>
+
+</div>
+
+<div id="work-item-photo">
+
+    <h2 style="padding:.5em 0em .8em 0em">Photography</h2>
+
+    <div style="text-align:center;">
+
+        <img class="work-img" src="images/photography-image-1.png">
+
+    </div>
+
+    <div class="about-text">
+
+        <p>These photos were taken for the final project of a photography class. We could choose any theme we liked, and I chose nighttime as the theme. I also adjusted the balance for these in Photoshop.</p>
+
+    </div>
+
+</div>
+
+<script type="text/javascript">
+    jQuery(function($){
+        $('#thumb-workbench').click(function(){
+            $('#work-item-workbench').show();
+            $('#work-item-push').hide();
+            $('#work-item-dart').hide();
+            $('#work-item-photo').hide();
+        })
+        $('#thumb-push').click(function(){
+            $('#work-item-workbench').hide();
+            $('#work-item-push').show();
+            $('#work-item-dart').hide();
+            $('#work-item-photo').hide();
+        })
+        $('#thumb-dart').click(function(){
+            $('#work-item-workbench').hide();
+            $('#work-item-push').hide();
+            $('#work-item-dart').show();
+            $('#work-item-photo').hide();
+        })
+        $('#thumb-photo').click(function(){
+            $('#work-item-workbench').hide();
+            $('#work-item-push').hide();
+            $('#work-item-dart').hide();
+            $('#work-item-photo').show();
+        })
+    })
+</script>
+
 </body>
 </html>
