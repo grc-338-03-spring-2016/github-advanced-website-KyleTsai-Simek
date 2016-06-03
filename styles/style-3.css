@@ -20,7 +20,6 @@ body {
 }
 
 .contact-text {
-    text-align: center;
     padding-top: 60px;
 }
 
@@ -128,6 +127,32 @@ img {
     margin-bottom: 0.2em;
 }
 
+[class*="col-"] {
+    float: left;
+}
+
+.col-a {
+    width: 40%;
+}
+
+.col-b {
+    width: 60%;
+}
+
+.contact-box {
+    margin-left: 2em;
+}
+
+.contact-title {
+    margin-top: 0;
+    margin-bottom: 0.1em;
+}
+
+.contact-details {
+    margin-top: 0;
+    margin-bottom: 1em;
+}
+
 /*Start of Nav menu*/
 
  /*This sets the font size and removes the default bullets from the ul list. Also sets the overall with of the ul as a percentage of the containing element*/
@@ -189,7 +214,19 @@ a:active {
 
 /* For mobile: */
 @media only screen and (max-width: 767px) {
-    /* mobile-only styles go here */
+
+    [class*="col-"] {
+        width: 100%;
+    }
+
+    .contact-box {
+        margin-top: 1em;
+    }
+
+    .contact-text {
+        padding-top: 1em;
+    }
+
 }
 
 
